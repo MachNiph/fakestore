@@ -3,10 +3,11 @@ import { useContext } from "react";
 import { SidebarContext } from "../Contexts/SidebarContext";
 import { CartContext } from "../Contexts/CartContext";
 import { FaArrowRight } from "react-icons/Fa";
+import CartItem from "./CartItem";
 
 const Sidebar = () => {
   const { isOpen, setIsOpen, handleClose } = useContext(SidebarContext);
-  console.log(useContext(CartContext));
+  const { cart } = useContext(CartContext);
 
   return (
     <div>
@@ -20,6 +21,12 @@ const Sidebar = () => {
           <div className="cursor-pointer text-gray-700 ">
             <FaArrowRight className="text-xl" onClick={handleClose} />
           </div>
+        </div>
+
+        <div>
+          {cart.map((item) => {
+            return <CartItem item={item} key={item.id}/>
+          })}
         </div>
       </div>
     </div>
