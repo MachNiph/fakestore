@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { SidebarContext } from "../Contexts/SidebarContext";
 import { CartContext } from "../Contexts/CartContext";
-import { FaArrowRight } from "react-icons/Fa";
+import { IoIosArrowRoundForward } from "react-icons/io";
 import CartItem from "./CartItem";
 import { CiTrash } from "react-icons/ci";
 
@@ -20,7 +20,7 @@ const Sidebar = () => {
         <div className="flex items-center justify-between p-6 border-b">
           <div>Shopping Bag (0)</div>
           <div className="cursor-pointer text-gray-700 ">
-            <FaArrowRight className="text-xl" onClick={handleClose} />
+            <IoIosArrowRoundForward className="text-4xl" onClick={handleClose} />
           </div>
         </div>
 
