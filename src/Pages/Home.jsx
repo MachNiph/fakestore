@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ProductContext } from "../Contexts/ProductContext";
 import Product from "./Product";
+import Hero from "../Components/Hero";
 
 const Home = () => {
   const { products } = useContext(ProductContext);
@@ -12,8 +13,9 @@ const Home = () => {
   });
   console.log(filteredProducts);
   return (
-    <section className="py-10 ">
-      <div className="flex flex-wrap gap-10 border-black items-center justify-center ">
+    <section className="">
+      <Hero />
+      <div className="flex flex-wrap gap-10 items-center justify-center ">
         {filteredProducts.map((product) => {
           return <Product product={product} key={product.id} />;
         })}

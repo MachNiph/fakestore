@@ -9,7 +9,7 @@ const Product = ({ product }) => {
   const { addToCart } = useContext(CartContext);
   return (
     <div className="flex items-center justify-center">
-      <div className=" flex flex-col gap-4 shadow-xl items-center w-96 p-1 hover:scale-105 transition-all duration-500 relative border-gray-200 border  ">
+      <div className=" flex flex-col gap-4 shadow-md items-center  w-96 py-2 hover:scale-105 transition-all duration-500 relative border-gray-200  ">
         <div className="absolute top-4 right-4  text-3xl  hover:text-red-500 opacity-0  ">
           <CiHeart />
         </div>

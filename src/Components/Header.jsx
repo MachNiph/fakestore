@@ -8,7 +8,7 @@ import { CartContext } from "../Contexts/CartContext";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
-  const { isOpen, setIsOpen, handleClose } = useContext(SidebarContext);
+  const { isOpen, setIsOpen } = useContext(SidebarContext);
   const { itemAmount } = useContext(CartContext);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <div
       className={`${
-        isActive ? " bg-red-300" : "bg-blue-300"
+        isActive ? " bg-white py-4 shadow-md" : "bg-none py-6"
       } fixed w-full z-10 transition-all`}
     >
       <div className="flex justify-between  px-5 items-center ">

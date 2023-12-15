@@ -28,11 +28,11 @@ const CartItem = ({ item }) => {
               </Link>
             </div>
 
-            <div className="flex items-center gap-6">
-              <div className="flex items-center text-xl gap-7 border w-full justify-center  cursor-pointer">
+            <div className="flex items-center gap-6 min-w-">
+              <div className="flex items-center gap-7 border  justify-between cursor-pointer">
                 <div
                   onClick={() => increaseAmount(id)}
-                  className="bg-pink-100 w-full flex items-center justify-center"
+                  className="flex items-center justify-center"
                 >
                   <FaPlus />
                 </div>
@@ -41,7 +41,7 @@ const CartItem = ({ item }) => {
 
                 <div
                   onClick={() => decreaseAmount(id)}
-                  className="bg-pink-100 w-full flex items-center justify-center"
+                  className="flex items-center justify-center"
                 >
                   <FaMinus />
                 </div>
@@ -57,8 +57,8 @@ const CartItem = ({ item }) => {
               className="text-xl text-gray-800 font-bold cursor-pointer"
             />
             <div>
-              <div className="font-semibold flex items-center ">
-                {`$ ${parseFloat(price * amount).toFixed(2)}`}
+              <div className=" ">
+                ${`${parseFloat(price * amount).toFixed(2)}`}
               </div>
             </div>
           </div>
