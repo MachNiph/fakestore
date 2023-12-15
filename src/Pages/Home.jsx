@@ -12,17 +12,13 @@ const Home = () => {
   });
   console.log(filteredProducts);
   return (
-    <div>
-      <section>
-        <div className="p-10">
-          <div className="flex flex-wrap gap-10 border-black items-center  ">
-            {filteredProducts.map((product) => {
-              return <Product product={product} key={product.id} />;
-            })}
-          </div>
-        </div>
-      </section>
-    </div>
+    <section className="py-10 ">
+      <div className="flex flex-wrap gap-10 border-black items-center justify-center ">
+        {filteredProducts.map((product) => {
+          return <Product product={product} key={product.id} />;
+        })}
+      </div>
+    </section>
   );
 };
 

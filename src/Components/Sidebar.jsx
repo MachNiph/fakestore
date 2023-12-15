@@ -4,10 +4,11 @@ import { SidebarContext } from "../Contexts/SidebarContext";
 import { CartContext } from "../Contexts/CartContext";
 import { FaArrowRight } from "react-icons/Fa";
 import CartItem from "./CartItem";
+import { CiTrash } from "react-icons/ci";
 
 const Sidebar = () => {
   const { isOpen, setIsOpen, handleClose } = useContext(SidebarContext);
-  const { cart } = useContext(CartContext);
+  const { cart, clearCart } = useContext(CartContext);
 
   return (
     <div>
@@ -25,8 +26,21 @@ const Sidebar = () => {
 
         <div>
           {cart.map((item) => {
-            return <CartItem item={item} key={item.id}/>
+            return <CartItem item={item} key={item.id} />;
           })}
+        </div>
+
+        <div className="flex gap-4 items-center justify-between  bg-red-100 w-full h-12 ">
+          <div className="text-xl">
+            <span className="font-semibold"> Total:</span> $10000
+          </div>
+
+          <div
+            onClick={clearCart}
+            className="text-2xl cursor-pointer py-4 bg-red-600 w-12 h-12 flex items-center justify-center"
+          >
+            <CiTrash />
+          </div>
         </div>
       </div>
     </div>
