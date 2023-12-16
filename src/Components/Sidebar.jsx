@@ -54,11 +54,11 @@ const Sidebar = () => {
             </div>
           </div>
 
-          <Link className=" flex items-center bg-gray-200 h-[50px] justify-center">
+          <Link className=" flex items-center bg-gray-200 min-h-[50px] justify-center">
             View Cart
           </Link>
 
-          <Link className="flex items-center bg-black text-white h-[50px] justify-center">
+          <Link className="flex items-center bg-black text-white min-h-[50px] justify-center">
             Checkout
           </Link>
         </div>
