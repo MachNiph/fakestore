@@ -12,13 +12,13 @@ const CartItem = ({ item }) => {
 
   return (
     <div className="">
-      <div className="flex w-full gap-4 items-center min-h-[140px] shadow-sm ">
+      <div className="flex  gap-2 items-center min-h-[140px] shadow-sm ">
         <Link to={`/product/${id}`}>
           <img className="max-w-[60px]" src={image} alt="" />
         </Link>
-        <div className="flex gap-2 ">
-          <div className="flex flex-col gap-6 justify-between min-w-[240px]">
-            <div className="max-w-[240px]">
+        <div className="flex justify-between w-screen gap-10">
+          <div className="flex flex-col justify-center gap-3  ">
+            <div className="">
               <Link
                 to={`/product/${id}`}
                 className="text-sm uppercase font-medium  hover:underline "
@@ -28,7 +28,7 @@ const CartItem = ({ item }) => {
               </Link>
             </div>
 
-            <div className="flex items-center gap-6 min-w-">
+            <div className="flex items-center gap-4">
               <div className="flex items-center gap-7 border  justify-between cursor-pointer">
                 <div
                   onClick={() => increaseAmount(id)}
@@ -57,7 +57,7 @@ const CartItem = ({ item }) => {
               className="text-xl text-gray-800 font-bold cursor-pointer"
             />
             <div>
-              <div className=" ">
+              <div className="font-semibold px-2">
                 ${`${parseFloat(price * amount).toFixed(2)}`}
               </div>
             </div>

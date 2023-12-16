@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="">
-      <div className="flex w-screen gap-6 py-32 h-[500px] ">
-        <div className="flex w-1/4 flex-col gap-4 px-2 ">
-          <h1 className="font-bold text-2xl">
+    <div className="border-b-4">
+      <div className="flex items-center h-[450px]  ">
+        <div className="flex  flex-col gap-4 px-2 ">
+          <h1 className="font-bold text-5xl">
             Unleash Style, Discover Comfort
           </h1>
-          <p className="font-semibold text-xl">Explore the Collection</p>
-          <Link to="/" className="underline ">
+          <p className="font-semibold text-3xl">Explore the Collection</p>
+          <Link to="/" className="underline text-2xl ">
             Shop Now
           </Link>
         </div>
         <img
-          className="w-2/3 "
+          className=" hidden w-2/3 sm:block "
           src="https://www.pngfind.com/pngs/b/46-465463_taylor-swift-png-transparent-image-transparent-background-fashion.png"
           alt=""
         />
