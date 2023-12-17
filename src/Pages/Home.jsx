@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <section className="">
       <Hero />
-      <div className="flex flex-wrap gap-10 items-center justify-center ">
+      <div className="flex flex-wrap gap-10 justify-center md:justify-around  md:p-5">
         {filteredProducts.map((product) => {
           return <Product product={product} key={product.id} />;
         })}

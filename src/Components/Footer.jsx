@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  const isProductWithId = /^\/product\/\d+$/.test(location.pathname);
+  if (isProductWithId) {
+    return null;
+  }
+
   return (
-    <div className="flex flex-col  bg-black text-white gap-10 py-10 s">
-      <div className="flex justify-center flex-col items-center gap-4 ">
+    <div className="flex flex-col  items-center justify-center bg-black text-white gap-10 py-10 ">
+      <div className="flex  flex-col items-center  gap-4 ">
         <h1 className="font-bold text-xl">
           TIMRO <span className="text-green-500">BAZAAR</span>
         </h1>
@@ -13,8 +20,8 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="flex justify-center items-center flex-wrap gap-20">
-        <div className="flex flex-col gap-4">
+      <div className="flex flex-wrap  justify-center items-center gap-20">
+        <div className="flex flex-col gap-2">
           <h1 className="font-bold text-xl">Categories</h1>
           <ul className="flex flex-col gap-2">
             <li>MensWear</li>
@@ -24,7 +31,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <h1 className="font-bold text-xl">Help</h1>
           <ul className="flex flex-col gap-2">
             <li>AboutUs</li>

@@ -38,7 +38,7 @@ const ProductDetails = () => {
 
             <button
               onClick={() => addToCart(product, product.id)}
-              className="bg-green-400 w-full h-10 text-white"
+              className="bg-green-400 w-1/2 h-10 text-white"
             >
               Add to Cart
             </button>

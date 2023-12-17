@@ -5,6 +5,7 @@ import { CiShoppingCart } from "react-icons/ci";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Contexts/CartContext";
+import MainProduct from "../Pages/MainProduct";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -30,6 +31,8 @@ const Header = () => {
             <IoHome />
           </div>
         </Link>
+
+        <Link to={"/product"}> Products</Link>
 
         <div
           onClick={() => setIsOpen(!isOpen)}

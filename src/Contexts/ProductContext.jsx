@@ -20,10 +20,26 @@ const ProductProvider = ({ children }) => {
     };
 
     fetchProducts();
-  }, []); // The empty dependency array ensures that the effect runs only once on mount.
+  }, []);
+
+  const sortProductsByPrice = (order) => {
+    const sortedProducts = [...products];
+
+    // Sort based on price
+    sortedProducts.sort((a, b) => {
+      if (order === "asc") {
+        return a.price - b.price;
+      } else if (order === "desc") {
+        return b.price - a.price;
+      } else {
+        return 0;
+      }
+    });
+    setProducts(sortedProducts);
+  };
 
   return (
-    <ProductContext.Provider value={{ products }}>
+    <ProductContext.Provider value={{ products, sortProductsByPrice }}>
       {children}
     </ProductContext.Provider>
   );
