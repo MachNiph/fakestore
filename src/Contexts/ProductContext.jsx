@@ -4,6 +4,7 @@ export const ProductContext = createContext();
 
 const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
+  const [mainproducts, setMainProducts] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -14,6 +15,7 @@ const ProductProvider = ({ children }) => {
         }
         const data = await response.json();
         setProducts(data);
+        setMainProducts(data);
       } catch (error) {
         console.error(error);
       }
@@ -38,8 +40,33 @@ const ProductProvider = ({ children }) => {
     setProducts(sortedProducts);
   };
 
+  //filter with category
+  const filterCategory = (category) => {
+    const categoryProducts = [...mainproducts];
+    if (category === "all") {
+      return setProducts(categoryProducts);
+    } else {
+      const filterValue = categoryProducts.filter((product) => {
+        if (category === "mens") {
+          return product.category === "men's clothing";
+        } else if (category === "womens") {
+          return product.category === "women's clothing";
+        } else if (category === "jewelery") {
+          return product.category === "jewelery";
+        } else if (category === "electronics") {
+          return product.category === "electronics";
+        } else {
+          return false;
+        }
+      });
+      setProducts(filterValue);
+    }
+  };
+
   return (
-    <ProductContext.Provider value={{ products, sortProductsByPrice }}>
+    <ProductContext.Provider
+      value={{ products, sortProductsByPrice, filterCategory }}
+    >
       {children}
     </ProductContext.Provider>
   );

@@ -32,7 +32,7 @@ const Header = () => {
           </div>
         </Link>
 
-        <Link to={"/product"}> Products</Link>
+        
 
         <div
           onClick={() => setIsOpen(!isOpen)}

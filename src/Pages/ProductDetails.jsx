@@ -20,15 +20,11 @@ const ProductDetails = () => {
 
   const { title, price, description, image } = product;
   return (
-    <div>
+    <div className=" h-screen flex items-center justify-center ">
       <div className="flex flex-col lg:flex-row items-center justify-center p-20">
         <div className="flex flex-col md:flex-row md:items-center gap-4 ">
           <div className="flex items-center justify-center border p-2">
-            <img
-              className="w-[150px] md:w-[250px] lg:w-[300px] xl:w-[350px]"
-              src={image}
-              alt=""
-            />
+            <img className="w-2/3 " src={image} alt="" />
           </div>
 
           <div className="flex flex-col gap-3 md:w-[500px] lg:w-[700px] xl:w-[900px]">

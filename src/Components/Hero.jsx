@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-// import womens from "/img/womens.avif";
+import { ProductContext } from "../Contexts/ProductContext";
 
 const Hero = () => {
+  const { filterCategory } = useContext(ProductContext);
   return (
     <div className="border-b-4">
       <div className="flex items-center h-[450px]  ">
@@ -11,7 +12,11 @@ const Hero = () => {
             Unleash Style, Discover Comfort
           </h1>
           <p className="font-semibold text-3xl">Explore the Collection</p>
-          <Link to="/" className="underline text-2xl ">
+          <Link
+            to="/product"
+            onClick={() => filterCategory("all")}
+            className="underline text-2xl "
+          >
             Shop Now
           </Link>
         </div>

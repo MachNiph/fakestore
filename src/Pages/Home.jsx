@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { ProductContext } from "../Contexts/ProductContext";
 import Product from "./Product";
 import Hero from "../Components/Hero";
+import Categories from "../Components/Categories";
 
 const Home = () => {
   const { products } = useContext(ProductContext);
@@ -13,13 +14,15 @@ const Home = () => {
   });
   console.log(filteredProducts);
   return (
-    <section className="">
+    <section className=" flex flex-col items-center">
       <Hero />
-      <div className="flex flex-wrap gap-10 justify-center md:justify-around  md:p-5">
+      {/* <div className="flex flex-wrap gap-10 justify-center md:justify-around  md:p-5">
         {filteredProducts.map((product) => {
           return <Product product={product} key={product.id} />;
         })}
-      </div>
+      </div> */}
+
+      <Categories />
     </section>
   );
 };
