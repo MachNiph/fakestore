@@ -32,8 +32,8 @@ const MainProduct = () => {
   }, [selectedOptionCategory]);
 
   return (
-    <div className="flex flex-col p-20 items-center justify-center gap-5 md:flex-row md:items-start md:justify-between ">
-      <div className="flex flex-col gap-2 items-center md:justify-start">
+    <div className="flex flex-col p-20 items-center justify-center gap-5 md:flex-row md:items-start md:justify-between md:top-0">
+      <div className="flex flex-col gap-2 items-center md:justify-start md:sticky">
         <div>
           <Searchbar products={products} />
         </div>
