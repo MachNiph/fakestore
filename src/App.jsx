@@ -7,6 +7,7 @@ import Sidebar from "./Components/Sidebar";
 import Footer from "./Components/Footer";
 import MainProduct from "./Pages/MainProduct";
 import Checkout from "./Pages/Checkout";
+import Register from "./Pages/Register";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/product" element={<MainProduct />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
         <Sidebar />
         <Footer />

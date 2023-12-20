@@ -60,8 +60,11 @@ const Sidebar = () => {
             </div>
           </div>
 
-          <Link className=" flex items-center bg-gray-200 min-h-[50px] justify-center">
-            View Cart
+          <Link
+            to="/register"
+            className=" flex items-center bg-gray-200 min-h-[50px] justify-center"
+          >
+            Register
           </Link>
 
           <Link
